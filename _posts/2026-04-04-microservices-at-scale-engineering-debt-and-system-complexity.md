@@ -1,10 +1,13 @@
 ---
-title : "Microservices at Scale: Engineering Debt and System Complexity"
-author : "merolhack"
-date : "2026-04-04"
-categories : 
- - guides
-tags : ""
+title: 'Microservices at Scale: Engineering Debt and System Complexity'
+author: merolhack
+date: '2026-04-04'
+categories:
+  - guides
+tags: ''
+image:
+  path: >-
+    /assets/img/posts/2026-04-04-microservices-at-scale-engineering-debt-and-system-complexity.png
 ---
 
 Every team that adopts microservices eventually hits the same wall — the system that was supposed to move faster starts moving slower. This post unpacks why distributed complexity compounds over time and what concrete signals tell you debt is winning.
