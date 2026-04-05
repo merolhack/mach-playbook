@@ -11,57 +11,20 @@ if (!fs.existsSync(IMG_DIR)) {
   fs.mkdirSync(IMG_DIR, { recursive: true });
 }
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-
-if (!GEMINI_API_KEY) {
-  console.error("Error: GEMINI_API_KEY is not set in .env or environment.");
-  process.exit(1);
-}
-
 async function generateImage(title) {
-  const prompt = `A header image for a professional tech blog post about ${title}, photorealistic, abstract technology, beautiful, 16:9 aspect ratio`;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=${GEMINI_API_KEY}`;
-  
-  const body = {
-    contents: [
-      {
-        parts: [
-          { text: prompt }
-        ]
-      }
-    ]
-  };
+  const prompt = `A header image for a professional tech blog post about ${title}, photorealistic, abstract technology, beautiful, highly detailed, clean design`;
+  const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1200&height=675&nologo=true`;
 
   try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    });
+    const response = await fetch(url);
 
-    const data = await response.json();
-
-    if (data.error) {
-      console.error("API Error:", data.error.message);
+    if (!response.ok) {
+      console.error("Image generation failed:", response.statusText);
       return null;
     }
 
-    if (data.candidates && data.candidates.length > 0) {
-      const parts = data.candidates[0].content.parts;
-      const imgPart = parts.find(p => p.inlineData && p.inlineData.mimeType.startsWith('image/'));
-      if (imgPart) {
-        return imgPart.inlineData.data;
-      }
-      // If the API unexpectedly returns text instead (content filtering or instruction rejection)
-      const textPart = parts.find(p => p.text);
-      console.error("API did not return image data. Returned text:", textPart ? textPart.text : "Unknown format");
-      return null;
-    } else {
-      console.error("Unexpected response:", data);
-      return null;
-    }
+    const arrayBuffer = await response.arrayBuffer();
+    return Buffer.from(arrayBuffer).toString('base64');
   } catch (error) {
     console.error("Fetch failed:", error);
     return null;
