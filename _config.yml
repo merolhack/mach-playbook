@@ -18,7 +18,7 @@ title: MACH Playbook # the main title
 
 tagline: >-
   Learn MACH fundamentals through concrete service boundaries, clean APIs,
-  and deployment examples, so architecture decisions feel tangible, not theoretical. # it will display as the subtitle
+  and deployment examples, so architecture decisions feel tangible, not theoretical.
 
 description: >- # used by seo meta and the atom feed
   Practical guides and patterns for Microservices, API-first, Cloud-native,
@@ -102,7 +102,7 @@ theme_mode: dark # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/img/avatar.svg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
