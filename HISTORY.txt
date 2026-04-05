@@ -1,0 +1,5 @@
+2026-04-04 18:58: Completed Phase 4 — Configure the Site
+  * Updated _config.yml with site metadata (title, tagline, baseurl: /mach-playbook, url: https://merolhack.github.io, comments config).
+  * Created _tabs/about.md.
+  * Created _tabs/privacy.md.
+  * Checked off Phase 4 items in PLAN.md.

@@ -1,8 +1,10 @@
 ---
-# the default layout is 'page'
+title: About
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Microservices & MACH Notes distills complex MACH architecture into practical
+guides. We focus on real-world patterns, API-first design, and resilient
+microservices, so you can ship independently scalable systems with confidence,
+not vendor-driven hype.
