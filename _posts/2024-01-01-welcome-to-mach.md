@@ -1,8 +1,14 @@
 ---
 title: Welcome to MACH
-date: 2024-01-01 12:00:00 +0000
-categories: [General, Updates]
-tags: [mach, welcome]
+date: '2024-01-01 12:00:00 +0000'
+categories:
+  - General
+  - Updates
+tags:
+  - mach
+  - welcome
+image:
+  path: /assets/img/posts/2024-01-01-welcome-to-mach.png
 ---
 
 Hello World! Welcome to the MACH Playbook. This is the central hub for learning Microservices, API-first, Cloud-native, and Headless architectural patterns. 
