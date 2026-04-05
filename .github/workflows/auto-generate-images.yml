@@ -1,0 +1,47 @@
+name: Auto Generate Missing Post Images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_posts/**'
+
+jobs:
+  generate-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: |
+          npm init -y
+          npm install dotenv gray-matter
+
+      - name: Run Image Generation Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/generate-images.js
+
+      - name: Commit and Push Updates
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add assets/img/posts/
+          git add _posts/
+          git status
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Auto-generate post preview images [skip ci]"
+            git push
+          else
+            echo "No new images generated."
+          fi
