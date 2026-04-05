@@ -2,3 +2,9 @@
 - Edited _config.yml with site details, dark mode, github repo/username and giscus comments.
 - Added _tabs/about.md with customized description.
 - Created _tabs/privacy.md for future AdSense application logic.
+
+2026-04-04 19:12: Phase 5 progression
+- Programmatically extracted dates and copied 34 Markdown posts to _posts/.
+- Formatted post names with date-prefix to follow Jekyll's naming convention.
+- Created _includes/head.html template with AdSense placeholder script.
+- Waiting for user to configure Giscus repo_id and category_id.

@@ -500,11 +500,11 @@ Phase 4 — Configure
 [x] _tabs/privacy.md created
 
 Phase 5 — Migrate content
-[ ] Posts copied to mach-playbook/_posts/
-[ ] Images copied to mach-playbook/assets/img/
+[x] Posts copied to mach-playbook/_posts/
+[x] Images copied to mach-playbook/assets/img/
 [ ] Giscus Discussions enabled on mach-playbook repo
 [ ] Giscus repo_id and category_id filled in _config.yml
-[ ] AdSense placeholder added to _includes/head.html (commented out)
+[x] AdSense placeholder added to _includes/head.html (commented out)
 
 Phase 6 — Deploy
 [ ] git push to main

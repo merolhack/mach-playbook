@@ -3,3 +3,11 @@
   * Created _tabs/about.md.
   * Created _tabs/privacy.md.
   * Checked off Phase 4 items in PLAN.md.
+
+2026-04-04 19:12: Phase 5 content migration
+  * Analyzed subdirectories from the wp-export script output.
+  * Copied 34 posts into _posts/ keeping the Jekyll naming standard (YYYY-MM-DD-title.md).
+  * Searched for images inside the post directories (no images found to copy).
+  * Created _includes/head.html with the AdSense Javascript placeholder block.
+  * Checked off Phase 5 tasks in PLAN.md except for Giscus.
+  * Workflow pages-deploy failed initially because GitHub Pages configuration is still pending in the repo settings (Step 6B).
