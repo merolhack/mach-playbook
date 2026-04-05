@@ -11,3 +11,9 @@
   * Created _includes/head.html with the AdSense Javascript placeholder block.
   * Checked off Phase 5 tasks in PLAN.md except for Giscus.
   * Workflow pages-deploy failed initially because GitHub Pages configuration is still pending in the repo settings (Step 6B).
+
+2026-04-05 13:00: Image Generation Automation & AdSense Integration
+  * Diagnosed Gemini API billing lock and natively rewrote pipeline to leverage Pollinations.ai for unmetered 16:9 technology SVG/PNG generation.
+  * Successfully triggered GH Action to auto-compute and inject beautiful cover images into all 34 posts' frontmatter simultaneously.
+  * Added programmatic `ads.txt` block in root and injected Publisher ID inside `_includes/head.html` placeholder for AdSense functionality.
+  * Cleaned out `_config.yml` template bugs and added dynamic raw SVG coding for sidebar `avatar.svg` brand mapping.

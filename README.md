@@ -1,39 +1,16 @@
-# Chirpy Starter
+# MACH Playbook
+## Modern Engineering & Architecture Knowledge Base
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+This repository hosts the **MACH Playbook**, a professional repository and engineering blog covering core cloud-native methodologies:
+- **M**icroservices
+- **A**PI-First
+- **C**loud-Native
+- **H**eadless Architecture
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+Built on [Jekyll](https://jekyllrb.com) using the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/) theme, this platform was migrated cleanly from WordPress to a static frontend deployed completely automatically via GitHub Pages.
 
-## Why This Starter Exists
-
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
-
-To unlock all features, the following files must be present in your Jekyll site:
-
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
-
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
-
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+### CI/CD Content Features
+This playbook leverages several programmatic integrations:
+1. **Automated Header Imagery:** All markdown files dropped into `_posts` missing a cover image will trigger a GitHub Action (`auto-generate-images`). The script calls Pollinations.ai to dynamically compute, fetch, and attach a unique, 16:9 abstract technology graphic directly to the YAML frontmatter. 
+2. **Google AdSense Enabled:** Site layout automatically tracks page hits and renders dynamic ads seamlessly via custom Jekyll includes.
+3. **Automated Deployments:** Fully tracked via GitHub Actions to deploy static pages instantly.
