@@ -1,10 +1,13 @@
 ---
-title : "The Distributed Monolith Trap: How Microservices Become What They Replace"
-author : "merolhack"
-date : "2026-04-04"
-categories : 
- - guides
-tags : ""
+title: 'The Distributed Monolith Trap: How Microservices Become What They Replace'
+author: merolhack
+date: '2026-04-04'
+categories:
+  - guides
+tags: ''
+image:
+  path: >-
+    /assets/img/posts/2026-04-04-the-distributed-monolith-trap-how-microservices-become-what-they-replace.png
 ---
 
 A companion deep-dive to our engineering debt post. The distributed monolith is the most common failure mode in microservices migrations — and it is invisible until it is expensive to fix.

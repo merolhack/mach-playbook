@@ -1,10 +1,13 @@
 ---
-title : "When NOT to Use Microservices: A Decision Framework"
-author : "merolhack"
-date : "2026-04-04"
-categories : 
- - guides
-tags : ""
+title: 'When NOT to Use Microservices: A Decision Framework'
+author: merolhack
+date: '2026-04-04'
+categories:
+  - guides
+tags: ''
+image:
+  path: >-
+    /assets/img/posts/2026-04-04-when-not-to-use-microservices-a-decision-framework.png
 ---
 
 The honest counterweight to MACH advocacy. Microservices are not a default — they are a trade-off. This post gives a concrete framework for deciding when a modular monolith is the right call.

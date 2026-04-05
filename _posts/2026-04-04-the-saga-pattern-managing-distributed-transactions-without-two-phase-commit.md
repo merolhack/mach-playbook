@@ -1,10 +1,13 @@
 ---
-title : "The Saga Pattern: Managing Distributed Transactions Without Two-Phase Commit"
-author : "merolhack"
-date : "2026-04-04"
-categories : 
- - patterns
-tags : ""
+title: 'The Saga Pattern: Managing Distributed Transactions Without Two-Phase Commit'
+author: merolhack
+date: '2026-04-04'
+categories:
+  - patterns
+tags: ''
+image:
+  path: >-
+    /assets/img/posts/2026-04-04-the-saga-pattern-managing-distributed-transactions-without-two-phase-commit.png
 ---
 
 ACID transactions do not cross service boundaries. The Saga pattern is the standard answer — but most explanations skip the hard parts: failure compensation, idempotency, and event ordering.

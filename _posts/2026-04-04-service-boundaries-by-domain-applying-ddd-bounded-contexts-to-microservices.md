@@ -1,10 +1,13 @@
 ---
-title : "Service Boundaries by Domain: Applying DDD Bounded Contexts to Microservices"
-author : "merolhack"
-date : "2026-04-04"
-categories : 
- - patterns
-tags : ""
+title: 'Service Boundaries by Domain: Applying DDD Bounded Contexts to Microservices'
+author: merolhack
+date: '2026-04-04'
+categories:
+  - patterns
+tags: ''
+image:
+  path: >-
+    /assets/img/posts/2026-04-04-service-boundaries-by-domain-applying-ddd-bounded-contexts-to-microservices.png
 ---
 
 The single most common reason microservices get messy is wrong service boundaries. Domain-Driven Design gives a principled method for drawing those lines — this post makes DDD practical for engineers who do not have time to read the blue book.

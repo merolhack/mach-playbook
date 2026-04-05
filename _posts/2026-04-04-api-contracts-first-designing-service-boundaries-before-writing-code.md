@@ -1,10 +1,13 @@
 ---
-title : "API Contracts First: Designing Service Boundaries Before Writing Code"
-author : "merolhack"
-date : "2026-04-04"
-categories : 
- - patterns
-tags : ""
+title: 'API Contracts First: Designing Service Boundaries Before Writing Code'
+author: merolhack
+date: '2026-04-04'
+categories:
+  - patterns
+tags: ''
+image:
+  path: >-
+    /assets/img/posts/2026-04-04-api-contracts-first-designing-service-boundaries-before-writing-code.png
 ---
 
 API-first is the A in MACH — but most teams treat it as a documentation step, not a design step. This post makes the case for contract definition as the first deliverable of any new service.
