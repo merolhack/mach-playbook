@@ -20,16 +20,16 @@ if (!GEMINI_API_KEY) {
 
 async function generateImage(title) {
   const prompt = `A header image for a professional tech blog post about ${title}, photorealistic, abstract technology, beautiful, 16:9 aspect ratio`;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-fast-generate-001:predict?key=${GEMINI_API_KEY}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=${GEMINI_API_KEY}`;
   
   const body = {
-    instances: [
-      { prompt: prompt }
-    ],
-    parameters: {
-      sampleCount: 1,
-      aspectRatio: "16:9"
-    }
+    contents: [
+      {
+        parts: [
+          { text: prompt }
+        ]
+      }
+    ]
   };
 
   try {
@@ -48,9 +48,16 @@ async function generateImage(title) {
       return null;
     }
 
-    if (data.predictions && data.predictions.length > 0) {
-      // Imagen 4 endpoint returns predictions[0].bytesBase64Encoded
-      return data.predictions[0].bytesBase64Encoded;
+    if (data.candidates && data.candidates.length > 0) {
+      const parts = data.candidates[0].content.parts;
+      const imgPart = parts.find(p => p.inlineData && p.inlineData.mimeType.startsWith('image/'));
+      if (imgPart) {
+        return imgPart.inlineData.data;
+      }
+      // If the API unexpectedly returns text instead (content filtering or instruction rejection)
+      const textPart = parts.find(p => p.text);
+      console.error("API did not return image data. Returned text:", textPart ? textPart.text : "Unknown format");
+      return null;
     } else {
       console.error("Unexpected response:", data);
       return null;
