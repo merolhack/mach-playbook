@@ -74,8 +74,8 @@ async function processPosts() {
       console.log(`Skipped ${file} due to generation failure.`);
     }
 
-    // Wait 2-3 seconds between requests to avoid rate limits
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    // Wait 5 seconds between requests to avoid rate limits
+    await new Promise(resolve => setTimeout(resolve, 5000));
   }
 
   console.log(`\nOperation finished. Generated ${processedCount} new images.`);

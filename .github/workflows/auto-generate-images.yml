@@ -45,7 +45,7 @@ jobs:
             git commit -m "Auto-generate post preview images"
             git push
             # Since GITHUB_TOKEN doesn't chain workflows, we manually trigger the deploy job
-            gh workflow run pages-deploy.yml -f ref=main
+            gh workflow run pages-deploy.yml --ref main
           else
             echo "No new images generated."
           fi
